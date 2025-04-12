@@ -2,5 +2,5 @@
   "name": "MUSE: Sound Sandbox",
   "version": "1.0.0",
   "description": "Cycle through sound effects by crouching.",
-  "rules": "https://gist.githubusercontent.com/RobertBronson/45e4bfb2d2f15f94edcad5f4f94198d1/raw/29a68e6cb2d4b7458eda7ec325c91c597d9143a0/rules.txt"
+  "rules": "https://raw.githubusercontent.com/RobertBronson/Sounds-Test/refs/heads/main/rules.txt?token=GHSAT0AAAAAADCDCPVUJVYBQSX63JEIVVBEZ7Z2QAA"
 }
