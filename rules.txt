@@ -1,0 +1,31 @@
+GlobalVariable<Number> SoundIndex[AllPlayers] = 0
+GlobalVariable<String[]> SoundList = [
+    "Sound_Headshot",
+    "Sound_SquadmateRevived",
+    "Sound_LevelUp",
+    "Sound_TacticalPing_Enemy",
+    "Sound_Hitmarker",
+    "Sound_AmmoPickup",
+    "Sound_HealthPickup",
+    "Sound_Promotion",
+    "Sound_Revive",
+    "Sound_GrenadeWarning"
+]
+
+Event OnPlayerChangedStance
+{
+    If EventPlayer.Stance == Crouch
+    {
+        Local Number i = SoundIndex[EventPlayer]
+        Local String currentSound = SoundList[i]
+
+        PlaySoundForPlayer(EventPlayer, currentSound)
+        DisplayMessageToPlayer(EventPlayer, "Sound: " + currentSound, Color.Green)
+
+        SoundIndex[EventPlayer] += 1
+        If SoundIndex[EventPlayer] >= Length(SoundList)
+        {
+            SoundIndex[EventPlayer] = 0
+        }
+    }
+}
